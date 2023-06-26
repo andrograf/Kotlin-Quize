@@ -38,6 +38,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun QuizCard(){
+
+}
+
+
+@Composable
 fun MainPage(modifier: Modifier){
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
