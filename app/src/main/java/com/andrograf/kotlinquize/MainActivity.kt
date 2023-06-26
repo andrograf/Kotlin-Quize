@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -50,7 +51,7 @@ fun QuizCard(modifier: Modifier){
         )
         Text(
             text = "Answer",
-            modifier = modifier
+            modifier = modifier.blur(15.dp)
         )
         Button(onClick = { /*TODO*/ }) {
             Text(text = "Reveal")
@@ -89,7 +90,8 @@ fun MainPage(modifier: Modifier){
 
 @Composable
 fun Quiz(modifier: Modifier = Modifier) {
-    MainPage(modifier = modifier)
+    //MainPage(modifier = modifier)
+    QuizCard(modifier = modifier)
 }
 
 @Preview(
