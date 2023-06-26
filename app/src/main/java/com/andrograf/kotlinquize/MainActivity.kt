@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Quiz("Android")
+                    Quiz()
                 }
             }
         }
@@ -36,17 +36,17 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Quiz(name: String, modifier: Modifier = Modifier) {
+fun Quiz(modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
         modifier = modifier.padding(25.dp)){
         Text(
-            text = "Hello $name!",
+            text = "Kotlin Interview Questions",
             modifier = modifier
         )
         Text(
-            text = "Hello $name!",
+            text = "answer",
             modifier = modifier
         )
         Button(
@@ -63,6 +63,6 @@ fun Quiz(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun QuizPreview() {
     KotlinQuizeTheme {
-        Quiz("Android")
+        Quiz()
     }
 }
