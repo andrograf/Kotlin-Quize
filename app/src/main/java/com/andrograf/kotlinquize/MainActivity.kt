@@ -39,7 +39,7 @@ fun Quiz(name: String, modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
-        modifier = modifier){
+        modifier = modifier.padding(25.dp)){
         Text(
             text = "Hello $name!",
             modifier = modifier
