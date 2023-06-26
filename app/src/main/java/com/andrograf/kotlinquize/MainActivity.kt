@@ -52,7 +52,7 @@ fun Quiz(name: String, modifier: Modifier = Modifier) {
         Button(
             onClick = { /*TODO*/ },
             modifier = Modifier.padding(start = 15.dp)) {
-            "Start"
+            Text(text = "Start", modifier = modifier)
         }
     }
 }
