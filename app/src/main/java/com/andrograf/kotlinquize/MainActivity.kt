@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 fun Quiz(name: String, modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.SpaceEvenly,
         modifier = modifier.padding(25.dp)){
         Text(
             text = "Hello $name!",
