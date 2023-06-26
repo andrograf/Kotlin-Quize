@@ -59,7 +59,7 @@ fun Quiz(name: String, modifier: Modifier = Modifier) {
     showBackground = true,
     showSystemUi = true)
 @Composable
-fun GreetingPreview() {
+fun QuizPreview() {
     KotlinQuizeTheme {
         Quiz("Android")
     }
