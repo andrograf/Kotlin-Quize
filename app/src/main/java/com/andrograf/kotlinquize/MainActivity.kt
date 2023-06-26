@@ -36,6 +36,28 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun MainPage(modifier: Modifier){
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly,
+        modifier = modifier.padding(25.dp)){
+        Text(
+            text = "Kotlin Interview Questions",
+            modifier = modifier
+        )
+        Button(
+            onClick = { /*TODO*/ },
+            modifier = Modifier.padding(start = 15.dp)) {
+            Text(text = "Start", modifier = modifier)
+        }
+    }
+}
+
+
+
+
+
+@Composable
 fun Quiz(modifier: Modifier = Modifier) {
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -45,10 +67,10 @@ fun Quiz(modifier: Modifier = Modifier) {
             text = "Kotlin Interview Questions",
             modifier = modifier
         )
-        Text(
+        /*Text(
             text = "answer",
             modifier = modifier
-        )
+        )*/
         Button(
             onClick = { /*TODO*/ },
             modifier = Modifier.padding(start = 15.dp)) {
