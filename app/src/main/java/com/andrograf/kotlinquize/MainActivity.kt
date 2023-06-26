@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -47,7 +48,9 @@ fun QuizCard(modifier: Modifier){
         modifier = modifier.padding(55.dp)){
         Text(
             text = "Question",
-            modifier = modifier
+            modifier = modifier,
+            fontWeight = FontWeight.Bold,
+            fontSize = 25.sp
         )
         Text(
             text = "Answer",
