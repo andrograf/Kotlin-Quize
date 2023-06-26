@@ -39,8 +39,23 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun QuizCard(){
-
+fun QuizCard(modifier: Modifier){
+    Column (
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly,
+        modifier = modifier.padding(55.dp)){
+        Text(
+            text = "Question",
+            modifier = modifier
+        )
+        Text(
+            text = "Answer",
+            modifier = modifier
+        )
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "Reveal")
+        }
+    }
 }
 
 
