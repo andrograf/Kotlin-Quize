@@ -14,8 +14,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.andrograf.kotlinquize.ui.theme.KotlinQuizeTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,16 +41,22 @@ class MainActivity : ComponentActivity() {
 fun MainPage(modifier: Modifier){
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceEvenly,
-        modifier = modifier.padding(25.dp)){
+        verticalArrangement = Arrangement.Center,
+        modifier = modifier.padding(55.dp)){
         Text(
             text = "Kotlin Interview Questions",
-            modifier = modifier
+            modifier = modifier.padding(20.dp),
+            fontSize = 28.sp,
+            textAlign = TextAlign.Center
         )
         Button(
             onClick = { /*TODO*/ },
             modifier = Modifier.padding(start = 15.dp)) {
-            Text(text = "Start", modifier = modifier)
+            Text(
+                text = "Start",
+                modifier = modifier,
+                fontSize = 18.sp
+            )
         }
     }
 }
@@ -59,24 +67,7 @@ fun MainPage(modifier: Modifier){
 
 @Composable
 fun Quiz(modifier: Modifier = Modifier) {
-    Column (
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceEvenly,
-        modifier = modifier.padding(25.dp)){
-        Text(
-            text = "Kotlin Interview Questions",
-            modifier = modifier
-        )
-        /*Text(
-            text = "answer",
-            modifier = modifier
-        )*/
-        Button(
-            onClick = { /*TODO*/ },
-            modifier = Modifier.padding(start = 15.dp)) {
-            Text(text = "Start", modifier = modifier)
-        }
-    }
+    MainPage(modifier = modifier)
 }
 
 @Preview(
