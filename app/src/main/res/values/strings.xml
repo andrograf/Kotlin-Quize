@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kotlin Quize</string>
+    <string name="title">Kotlin Interview Questions</string>
 </resources>
