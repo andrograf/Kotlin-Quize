@@ -49,7 +49,9 @@ fun Quiz(name: String, modifier: Modifier = Modifier) {
             text = "Hello $name!",
             modifier = modifier
         )
-        Button(onClick = { /*TODO*/ }) {
+        Button(
+            onClick = { /*TODO*/ },
+            modifier = Modifier.padding(start = 15.dp)) {
             "Start"
         }
     }
