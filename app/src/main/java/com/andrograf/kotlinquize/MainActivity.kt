@@ -3,6 +3,8 @@ package com.andrograf.kotlinquize
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,9 +14,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -42,6 +45,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun QuizCard(modifier: Modifier){
+    val interactionSource = remember { MutableInteractionSource() }
+    val isPressed by interactionSource.collectIsPressedAsState()
     Column (
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly,
@@ -54,11 +59,11 @@ fun QuizCard(modifier: Modifier){
         )
         Text(
             text = "Answer",
-            modifier = modifier.blur(15.dp)
+            modifier = modifier,//.blur(30.dp).clickable { modifier.blur(0.dp) }, <<from android 12
         )
         Button(onClick = { /*TODO*/ }) {
             Text(
-                text = "Reveal",
+                text = "Next",
                 modifier = modifier,
                 fontSize = 18.sp
             )
