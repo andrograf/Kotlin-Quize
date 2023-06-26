@@ -57,7 +57,11 @@ fun QuizCard(modifier: Modifier){
             modifier = modifier.blur(15.dp)
         )
         Button(onClick = { /*TODO*/ }) {
-            Text(text = "Reveal")
+            Text(
+                text = "Reveal",
+                modifier = modifier,
+                fontSize = 18.sp
+            )
         }
     }
 }
